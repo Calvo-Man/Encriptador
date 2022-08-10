@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+ <html lang="es">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="widht=device-width,initial-scale=1.0"/>
+        <link href="styles.css" rel="stylesheet" type="text/css"/>
+        <title>Encriptador</title>
+    </head>
+    <body>
+        <main>
+            <section class="content">
+                <img class="logo" src="resources/Vector.png"/>
+                <div class="textarea" >
+                    <textarea id="textarea" rows="8" cols="22" placeholder="Ingrese el texto aqui" required></textarea>
+                    <hr>
+                    <p class="aviso"><img src="resources/Vector!.png"/></p>
+                    <p id="label">Solo letras minúsculas y sin acentos</p>
+                </div>
+                <div class="notext" id="notextt">
+                    <h2 id="muneco"><img src="resources/Muñecoman.png"/></h2>
+                    <h1>Ningún mensaje fue encontrado </h1>
+                    <p>Ingrese el texto que desea encriptar o desencriptar</p>
+                </div>
+                <div class="text" id="textt">
+                    <textarea id="texto"></textarea>
+                    <div class="copiar"><button  id="copiar" onclick="copiar()" >copiar</button></div>  
+                </div>
+            </section>
+            <div class="botones">
+                <button  id="encriptar" onclick="botonEncriptar()">Encriptar</button>
+                <button  id="desencriptar" onclick="botonDesencriptar()">Desencriptar</button>
+            </div>                   
+        </main>
+    
+        <script>
+            let texto = "";
+            function botonEncriptar(){
+                obtenerTexto();
+                ocultar(texto);
+                encriptar(texto);
+                escribirEn(encriptado);
+                
+            }
+
+            function botonDesencriptar(){
+                obtenerTexto();
+                ocultar(texto);
+                desencriptar(texto);
+                escribirDes(desencriptado);
+                
+            }
+
+            function ocultar(texto) {              
+                let x = document.getElementById("notextt");
+                let y = document.getElementById("textt");
+                y.style.display="none";
+                x.style.display = "block";
+                if(texto != ""){
+                        if (x.style.display == "block"){
+                            x.style.display = "none";
+                            y.style.display="block";
+                        }else {
+                            x.style.display = "none";
+                            y.style.display = "block";
+                        }
+                }
+               
+            }
+            function obtenerTexto(){
+                texto = document.querySelector("#textarea").value;
+                document.querySelector("#textarea").value="";
+                return texto;
+            }
+            function escribirEn(encriptado){ 
+                document.querySelector(".text > #texto").innerHTML =encriptado;
+                   
+            }
+            function escribirDes(desencriptado){ 
+                document.querySelector("#texto").innerHTML =desencriptado;   
+            }
+
+            function encriptar(texto) {
+                let letras = texto.split("");
+                let llaves = {
+                    a: 'ai',
+                    e: 'enter',
+                    i: 'imes',
+                    o: 'ober',
+                    u: 'ufat'
+                    };                   
+                return encriptado = letras.map( letra => llaves[letra] ? llaves[letra] : letra).join('');
+            }
+
+            function desencriptar(texto) {
+                desencriptado1= texto.replace(/ai/gi,"a"); 
+                desencriptado2= desencriptado1.replace(/enter/gi,"e");             
+                desencriptado3= desencriptado2.replace(/imes/gi,"i");
+                desencriptado4= desencriptado3.replace(/ober/gi,"o");
+                desencriptado= desencriptado4.replace(/ufat/gi,"u");
+                return desencriptado1;
+            }
+            function copiar(){
+               let content = document.getElementById('texto');
+               content.select();
+               content.setSelectionRange(0,99999);
+               document.execCommand('copy');
+               
+            }
+        </script>
+    
+    </body>
+ </html>

@@ -1,0 +1,177 @@
+html{
+   max-width: 160px;
+}
+body{
+ background-image:url(resources/Beautiful.jpg);
+ background-size: cover;
+ background-attachment: fixed; 
+ width: 90%;
+ height: 100%;
+}
+main{
+    margin-left: 90px;
+    margin-top: 27px;
+    border: 1px solid rgb(29, 4, 255);
+    border-radius: 15px;
+    background-color: rgba(171, 27, 184, 0.274);
+    background-size: contain;
+    width: 1150px;
+    min-height: 600px;
+    animation: bordermove 5s infinite;
+}
+
+
+.logo{
+    width: 30px;
+    margin: 20px;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: blueviolet;
+    animation: bordermove 5s infinite;
+}
+
+.textarea{
+    width: 400px;
+    height: 410px;
+    margin: 20px;
+    position: absolute;
+    right: 50%;
+    top: 7%;     
+}
+.textarea p{
+    margin-top: 155px;
+    margin-left: 0px;  
+}
+
+#label{
+    font-size: 13px;
+    margin-left: 3px;
+    margin-bottom: 10px;
+}
+p,h1{
+    color: antiquewhite;
+}
+.notext,.text{
+    border: none;
+    position: absolute;
+    top: 9%;
+    left: 58%;
+    width: 400px;
+    border-radius: 10px;
+    background-color: rgba(22, 22, 155, 0.719);
+    text-align: center;
+    height: 530px;
+    border: 1px solid rgb(29, 4, 255);  
+}
+.notext:hover{
+    box-shadow:5px 5px 5px 5px rgba(34, 7, 185, 0.76) inset;  
+}
+.text:hover{box-shadow:5px 5px 5px 5px rgba(34, 7, 185, 0.76) inset;}
+.text > #texto{  
+    width: 250px;
+    height: 20rem;
+    margin: 18px; 
+    border-radius: 10px; 
+    background-color: rgba(240, 255, 255, 0.007);
+    border: none;
+    text-align: center;
+    resize: none;
+}
+#textt{
+    text-align: center;
+    display: none;   
+}
+.notext{
+    display: block;
+}
+.notext p,h1{
+    width: 250px;
+    margin-left: 85px;
+}
+.botones{ 
+    position: absolute;
+    bottom: 20%;
+    left: 19%;
+    width: 500px;
+}
+.botones button{
+    animation: bordermove 5s infinite;
+}
+#desencriptar{
+    margin-left: 15px;
+}
+.textarea textarea {  
+    background-color: rgba(22, 22, 155, 0.486);  
+    color: rgb(226, 226, 226);
+    font-size: 16px;
+    margin: 20px;
+    margin-left: 35px;
+    padding: 10px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    border: none;
+    resize: none;
+     
+}
+
+textarea::placeholder{
+    font-size: 16px;
+    color:antiquewhite;
+}
+textarea:focus{
+    animation: bordermove2 5s infinite;
+    outline: none;  
+}
+
+.aviso,#label{
+    display: inline-block;   
+}
+hr{
+    border: none;
+}
+button{
+    width:208px;
+    height : 40px;
+    border-radius: 10px;
+    background-color: rgb(153, 0, 255);
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 9px rgba(57, 20, 190, 0.904);
+    color: antiquewhite;
+    font-size: 19px;
+    animation: bordermove 5s infinite;
+    
+}
+button:active {
+    background-color: #1e2fce;
+    box-shadow: 0 5px rgb(131, 6, 143);
+    transform: translateY(4px);
+}
+button:hover{
+    border: solid 1px blue;
+}
+
+.copiar{
+    position: absolute;
+    bottom: 12%;
+    right: 23%;
+}
+#copiar:active {
+    background-color: #1e2fce;
+    box-shadow: 0 5px rgb(36, 16, 216);
+    transform: translateY(4px);
+}
+@keyframes bordermove {
+    0%   {border:1px solid rgb(171, 27, 184); left: 0px; top: 0px;}
+    25%  {border: 1px solid rgb(29, 4, 255); left: 200px; top: 0px;}
+    50%  {border:1px solid rgb(171, 27, 184); left: 200px; top: 200px;}
+    75%  {border:1px solid rgb(29, 4, 255); left: 0px; top: 200px;}
+    100% {border:1px solid rgb(171, 27, 184); left: 0px; top: 0px;}
+}
+@keyframes bordermove2{
+    0%   {border:1px solid rgb(43, 27, 184); left: 0px; top: 0px;}
+    25%  {border: 1px solid rgb(255, 4, 17); left: 200px; top: 0px;}
+    50%  {border:1px solid rgb(51, 27, 184); left: 200px; top: 200px;}
+    75%  {border:1px solid rgb(255, 4, 4); left: 0px; top: 200px;}
+    100% {border:1px solid rgb(51, 27, 184); left: 0px; top: 0px;}
+}
