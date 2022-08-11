@@ -117,9 +117,16 @@
             function validar(texto){               
                 let validar = texto.match(/[a-z0-9]/g); 
                 let espacios = texto.match(/\s/g) ;                          
-                if(validar!=null){
+                if(validar!=null&&espacios!=null){
                     let cont = validar.length+espacios.length;
-                    if(cont== texto.length) {                  
+                    if(validar.length+espacios.length== texto.length) {                  
+                    document.getElementById("label").style.color=null;
+                    document.getElementById("label").style.fontSize=null;
+                    document.querySelector("#textarea").value="";
+                    return validado=texto;
+                } }
+                if(validar!=null){                   
+                    if(validar.length== texto.length) {                  
                     document.getElementById("label").style.color=null;
                     document.getElementById("label").style.fontSize=null;
                     document.querySelector("#textarea").value="";
