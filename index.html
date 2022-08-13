@@ -7,38 +7,40 @@
         <title>Encriptador</title>
     </head>
     <body>
-        <main>
-            <section class="content">
-                <img class="logo" src="resources/Vector.png"/>
+        <main>           
+            <div class="content">               
+                <img class="logo" src="resources/Vector.png"/>                
                 <div class="textarea" >
-                    <textarea id="textarea" name="textarea" rows="8" cols="22" placeholder="Ingrese el texto aqui" required
+                    <textarea id="textarea" name="textarea" rows="8" cols="22" placeholder="Ingrese el texto aqui" 
                      ></textarea>
                     <hr>
-                    <p class="aviso"><img src="resources/Vector!.png"/></p>
+                    <p class="aviso"><img  id="aviso" src="resources/Vector!.png"/></p>
                     <p id="label">Solo letras minúsculas y sin acentos</p>
+                    <div class="botones">
+                        <button  id="encriptar" onclick="botonEncriptar()">Encriptar</button>
+                        <button  id="desencriptar" onclick="botonDesencriptar()">Desencriptar</button>
+                    </div>
                 </div>
                 <div class="notext" id="notextt">
-                    <h2 id="muneco"><img src="resources/Muñecoman.png"/></h2>
+                    <h2 id="muneco"><img class="muneco"  src="resources/Muñecoman.png"/></h2>
                     <h1>Ningún mensaje fue encontrado </h1>
                     <p>Ingrese el texto que desea encriptar o desencriptar</p>
                 </div>
                 <div class="text" id="textt">
-                    <textarea id="texto"></textarea>
+                    <textarea id="texto" ></textarea>
                     <div class="copiar"><button  id="copiar" onclick="copiar()" >copiar</button></div>  
                 </div>
-            </section>
-            <div class="botones">
-                <button  id="encriptar" onclick="botonEncriptar()">Encriptar</button>
-                <button  id="desencriptar" onclick="botonDesencriptar()">Desencriptar</button>
-            </div>                   
+            </div>
+            <div id="clearfix"></div>                             
         </main>
         <footer>
-            <p>Creador: Miguel Angel Acuna Hernandez</p>
+            <h2><span>Creador:</span> Miguel Angel Acuna Hernandez</h2>
         </footer>
     
         <script>
             let texto = "";
             function botonEncriptar(){
+               
                 obtenerTexto();
                 validar(texto);                               
                 encriptar(validado);               
@@ -48,8 +50,7 @@
 
             function botonDesencriptar(){               
                 obtenerTexto();
-                validar(texto);                                               
-                                                           
+                validar(texto);                                                                                                          
                 desencriptar(validado);
                 escribirDes(desencriptado);
                 ocultar(texto);
@@ -77,12 +78,12 @@
                 
                 return texto;
             }
-            function escribirEn(encriptado){ 
-                document.querySelector(".text > #texto").innerHTML =encriptado;                   
+            function escribirEn(encriptado){                
+                document.getElementById('texto').value=encriptado;                   
             }
 
-            function escribirDes(desencriptado){ 
-                document.querySelector("#texto").innerHTML =desencriptado;   
+            function escribirDes(desencriptado){               
+                document.getElementById('texto').value=desencriptado;   
             }
 
             function encriptar(validado) {
@@ -110,8 +111,7 @@
                let content = document.getElementById('texto');
                content.select();
                content.setSelectionRange(0,99999);
-               document.execCommand('copy');
-               
+               document.execCommand('copy');               
             }
 
             function validar(texto){               
@@ -119,26 +119,29 @@
                 let espacios = texto.match(/\s/g) ;                          
                 if(validar!=null&&espacios!=null){
                     let cont = validar.length+espacios.length;
-                    if(validar.length+espacios.length== texto.length) {                  
+                    if(validar.length+espacios.length== texto.length) {  
+                    document.getElementById("label").innerHTML ="Solo letras minúsculas y sin acentos";                   
                     document.getElementById("label").style.color=null;
                     document.getElementById("label").style.fontSize=null;
                     document.querySelector("#textarea").value="";
                     return validado=texto;
                 } }
                 if(validar!=null){                   
-                    if(validar.length== texto.length) {                  
+                    if(validar.length== texto.length) {  
+                    document.getElementById("label").innerHTML ="Solo letras minúsculas y sin acentos";                
                     document.getElementById("label").style.color=null;
                     document.getElementById("label").style.fontSize=null;
                     document.querySelector("#textarea").value="";
+                    
                     return validado=texto;
                 } }
                 else{  
-                    document.querySelector("#label").innerHTML ="Solo letras minúsculas y sin acentos";                 
+                    document.getElementById("label").innerHTML ="Solo letras minúsculas y sin acentos";                 
                     document.getElementById("label").style.color="salmon";
                     document.getElementById("label").style.fontSize="20px";
                 }
                 if(texto==""){
-                    document.querySelector("#label").innerHTML ="Ingrese un texto";
+                    document.getElementById("label").innerHTML ="Ingrese un texto";
                 }
             }
            
