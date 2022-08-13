@@ -13,7 +13,7 @@ main{
     background-color: rgba(171, 27, 184, 0.274);
     background-size: contain;
     width: 90%;
-    height: 35rem auto;
+    height: 70% auto;
     animation: bordermove 5s infinite;
 }
 
