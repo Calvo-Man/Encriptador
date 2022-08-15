@@ -258,6 +258,7 @@ footer{
         margin-left: auto;
         height: 94%;
         width: 100%;
+        margin-top: 1rem;
     }
     .muneco{
         display: none;
@@ -276,6 +277,7 @@ footer{
     }
     textarea::placeholder{
         font-size: 1em;
+        text-align: center;
     }
     .textarea #label{
         font-size: 1.3em;
@@ -291,7 +293,12 @@ footer{
     button{
         font-size: 1.3em;
         font-weight:bold;
+        display: block;
        
+    }
+    #desencriptar{
+        margin: auto;
+        margin-top: 15px;
     }
     .text{
         height: 16rem;
