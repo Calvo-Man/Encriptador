@@ -10,8 +10,7 @@ main{
     margin-bottom: 0px ;
     border: 1px solid rgb(29, 4, 255);
     border-radius: 15px;
-    background-color: rgba(171, 27, 184, 0.274);
-   
+    background-color: rgba(204, 36, 219, 0.274);  
     width: 90%;
     min-height: 595px;
     animation: bordermove 5s infinite;
@@ -162,7 +161,7 @@ textarea::placeholder{
     color:antiquewhite;
 }
 textarea:focus{
-    animation: bordermove2 5s infinite;
+    animation: bordermove 5s infinite;
     outline: none;  
 }
 
@@ -186,7 +185,7 @@ button{
     color: antiquewhite;
     font-size: 0.9rem larger;   
     font-weight: bolder;
-    animation: bordermove 5s infinite;
+    animation: bordermove2 5s infinite;
     
 }
 button:active {
@@ -247,9 +246,9 @@ footer{
 
 @keyframes bordermove2{
     0%   {border:1px solid rgb(43, 27, 184); left: 0px; top: 0px;}
-    25%  {border: 1px solid rgb(255, 4, 17); left: 200px; top: 0px;}
+    25%  {border: 1px solid rgb(96, 255, 4); left: 200px; top: 0px;}
     50%  {border:1px solid rgb(51, 27, 184); left: 200px; top: 200px;}
-    75%  {border:1px solid rgb(255, 4, 4); left: 0px; top: 200px;}
+    75%  {border:1px solid rgb(4, 255, 38); left: 0px; top: 200px;}
     100% {border:1px solid rgb(51, 27, 184); left: 0px; top: 0px;}
 }
 
@@ -279,8 +278,12 @@ footer{
         font-size: 1em;
     }
     .textarea #label{
-        font-size: 1.4em;
-        width: auto;
+        font-size: 1.3em;
+        width: 80%;
+    }
+     #aviso{
+      width: 1.5rem;
+      margin-right: 3px;
     }
     .botones{
         height: 4rem;
@@ -288,6 +291,7 @@ footer{
     button{
         font-size: 1.3em;
         font-weight:bold;
+       
     }
     .text{
         height: 16rem;
@@ -316,4 +320,65 @@ footer{
     #creador{
         font-size: 23px;
     }
+}
+
+@media screen and (min-width:481px) and (max-width:990px){
+  main{
+    width: 95%;
+    
+  }
+  .text,.notext{
+    margin: auto ;
+    margin-left: 20% ;   
+    width: auto;   
+  }
+  .text{
+    width: 60%;
+    
+  }
+  .text > #texto{
+    font-size: 1.8em;
+    
+  }
+  .notext{
+    width: 60%;
+  }
+  .notext p{
+    font-size: 1.3em;
+  }
+  .notext h1{
+    font-size: 1.6em;
+  }
+  .notext .muneco{
+    height: 12rem;
+    width: auto;
+  }
+  .textarea{
+    width: 75%;
+    margin-left: 20%;
+    margin-top: -65px ;
+    margin-bottom: 40px;
+  }
+  .textarea textarea{
+    width: 70%;
+    font-size: 1.9em;
+ }
+ textarea::placeholder{
+    font-size: 1.5rem;
+ }
+ .textarea > #label{
+    font-size: 1.5em;
+    width: 90%;
+ }
+ #aviso{
+    width: 1.1rem;
+    margin-right: 3px;
+  }
+  .creador,#creador{
+    width: auto;
+    font-size: 20px;        
+}
+#creador{
+    font-size: 23px;
+}
 }

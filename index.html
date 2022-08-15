@@ -34,7 +34,7 @@
             <div id="clearfix"></div>                             
         </main>
         <footer>
-            <h2><span>Creador:</span> Miguel Angel Acuna Hernandez</h2>
+            <h2 class="creador"><span id="creador">Creador:</span> Miguel Angel Acuna Hernandez</h2>
         </footer>    
         <script>
             let texto = "";
@@ -121,7 +121,7 @@
                     if(validar.length+espacios.length == texto.length) {  
                     document.getElementById("label").innerHTML ="Solo letras minúsculas y sin acentos";                   
                     document.getElementById("label").style.color=null;
-                    document.getElementById("label").style.fontSize=null;
+                    
                     document.querySelector("#textarea").value="";
                     return validado=texto;
                 } }
@@ -129,7 +129,7 @@
                     if(validar.length== texto.length) {  
                     document.getElementById("label").innerHTML ="Solo letras minúsculas y sin acentos";                
                     document.getElementById("label").style.color=null;
-                    document.getElementById("label").style.fontSize=null;
+                    
                     document.querySelector("#textarea").value="";
                     
                     return validado=texto;
@@ -138,7 +138,7 @@
                     if(validar.length != texto.length) {  
                     document.getElementById("label").innerHTML ="Solo letras minúsculas y sin acentos";                
                     document.getElementById("label").style.color="salmon";
-                    document.getElementById("label").style.fontSize="20px";
+                    
                     
                 }}
                 if(validar!=null&&espacios!=null){
@@ -146,14 +146,14 @@
                     if(validar.length+espacios.length != texto.length) {  
                     document.getElementById("label").innerHTML ="Solo letras minúsculas y sin acentos";                   
                     document.getElementById("label").style.color="salmon";
-                    document.getElementById("label").style.fontSize="20px";
+                    
                     
                 } }
 
                 else {                 
                     document.getElementById("label").innerHTML ="Solo letras minúsculas y sin acentos";                 
                     document.getElementById("label").style.color="salmon";
-                    document.getElementById("label").style.fontSize="20px";
+                   
                 }
                
                 if(texto==""){
