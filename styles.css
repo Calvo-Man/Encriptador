@@ -319,17 +319,23 @@ span{
     }
     .notext h1,.notext p{
         font-size: 1.8em;
-    }
-    
+    }   
     .copiar{
         height: 4rem;
     }
     .creador,#creador{
-        width: auto;
-        font-size: 20px;        
+        
+        font-size: 2em; 
+        height: auto;       
     }
     #creador{
-        font-size: 23px;
+        font-size: 1.2em;
+    }
+    .footer{
+        width: auto;
+        height: 6rem;
+        line-height: normal;
+
     }
 }
 
