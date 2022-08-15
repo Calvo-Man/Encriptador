@@ -11,9 +11,9 @@ main{
     border: 1px solid rgb(29, 4, 255);
     border-radius: 15px;
     background-color: rgba(171, 27, 184, 0.274);
-    background-size: contain;
+   
     width: 90%;
-    height: 70% auto;
+    min-height: 595px;
     animation: bordermove 5s infinite;
 }
 
@@ -32,12 +32,15 @@ main{
     
 }
 .textarea,.notext,.text{
-    margin-left: 4%;
+    margin-left: 36px;
     margin-top: 3%;
     margin-bottom: 3%;   
 }
 .notext,.text{
-    margin-left: 8%;
+    margin-left: 150px;
+}
+.text{
+    height: auto;
 }
 #clearfix{
     clear: both;
@@ -76,7 +79,7 @@ p,h1{
 }
 .notext .muneco{
     width: 90% ;
-    height: auto;
+    height: 300px;
     margin-bottom: 3rem;
     
     
@@ -117,13 +120,13 @@ p,h1{
     
 }
 #textt{
-    margin-left: 4rem;
+   
     text-align: center;
     display: none;   
 }
 .notext{
     display: block;
-    margin-left: 4rem;
+    
 }
 
 .botones{  
@@ -213,7 +216,7 @@ button:hover{
 }
 footer > h2{
     width: 30%; 
-    color: antiquewhite;
+    color: rgb(255, 255, 255);    
     font-size: 15px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, Times, serif;
     margin-top: 10px;
@@ -226,10 +229,11 @@ span{
 }
 
 footer{
+    background-color: rgba(22, 22, 155, 0.486); 
     margin-top:0px auto;
-    width: 90%;
+    width: 100%;
     height: 20%;
-    margin-left: 2rem;
+    text-align: center;
     
 }
 
@@ -247,4 +251,69 @@ footer{
     50%  {border:1px solid rgb(51, 27, 184); left: 200px; top: 200px;}
     75%  {border:1px solid rgb(255, 4, 4); left: 0px; top: 200px;}
     100% {border:1px solid rgb(51, 27, 184); left: 0px; top: 0px;}
+}
+
+@media screen and (max-width:480px){
+    main{
+        margin-top: 45px;
+        margin-left: auto;
+        height: 94%;
+        width: 100%;
+    }
+    .muneco{
+        display: none;
+    }
+    .notext,.text,.textarea{
+        width: auto;       
+        margin: 35px;        
+    }
+    .textarea{
+        height: 27rem;
+        width: 90%;
+    }
+    .textarea textarea{
+        width: 80%;
+        font-size: 2em;
+    }
+    textarea::placeholder{
+        font-size: 1em;
+    }
+    .textarea #label{
+        font-size: 1.4em;
+        width: auto;
+    }
+    .botones{
+        height: 4rem;
+    }
+    button{
+        font-size: 1.3em;
+        font-weight:bold;
+    }
+    .text{
+        height: 16rem;
+    }
+    .notext,.text{
+        margin-top: 6px auto;      
+    }
+    .text > #texto{
+        height: 10rem;
+        font-size: 1.8rem;
+    }
+    .notext{
+        width: 86%;
+    }
+    .notext h1,.notext p{
+        font-size: 1.8em;
+    }
+    
+    .copiar{
+        height: 4rem;
+    }
+    .creador,#creador{
+        width: auto;
+        font-size: 20px;        
+    }
+    #creador{
+        font-size: 23px;
+    }
 }
