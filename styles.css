@@ -5,17 +5,16 @@ body{
  background-size: cover;
 }
 main{
-    margin: 2% auto;
-    margin-left: 4%;
+    margin-top: 5% ;
+    margin-left: 3%;
     margin-bottom: 0px ;
     border: 1px solid rgb(29, 4, 255);
     border-radius: 15px;
     background-color: rgba(204, 36, 219, 0.274);  
-    width: 90%;
-    min-height: 595px;
+    width: 95%;
+    height: 50rem ;
     animation: bordermove 5s infinite;
 }
-
 
 .logo{
     width: 30px;
@@ -47,11 +46,10 @@ main{
 
 .textarea{   
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;   
-    width: 35%; 
+    width: 40% ; 
     height: 30rem ; 
-    margin-bottom: -4rem;  
-   
-      
+    margin: 10rem auto;  
+         
 }
 .textarea p{
     margin-top: -2% auto;
@@ -59,8 +57,8 @@ main{
 }
 
 #label {
-    font-size: 80%;
-    width: 60%; 
+    font-size: 1.5em;
+    width: auto; 
 }
 p,h1{
     color: antiquewhite;
@@ -71,14 +69,16 @@ p,h1{
     background-color: rgba(22, 22, 155, 0.719);
     text-align: center;
     height: 35rem auto;
+    margin: 10rem auto;
+    margin-left: 15%;
       
 }
 .text{
-    height: 25rem ; 
+    height: 35.5rem; 
 }
 .notext .muneco{
-    width: 90% ;
-    height: 300px;
+    width: 90% auto;
+    height: 300px auto;
     margin-bottom: 3rem;
     
     
@@ -87,7 +87,7 @@ p,h1{
     margin-bottom: 3%;
     width: 60%;
     height: 15% ;
-    font-size: 130% ;
+    font-size: 2em;
     margin:  auto;
     margin-left: 19% ;
 
@@ -96,7 +96,7 @@ p,h1{
 .notext p{
     width: 60%;
     height: 17%;
-    font-size: 100%;
+    font-size: 1.4em;
     margin-left: 19% ;
     
 }
@@ -110,7 +110,7 @@ p,h1{
     margin: 18px; 
     border-radius: 10px; 
     background-color: rgba(240, 255, 255, 0.007);
-    font-size: 1rem;
+    font-size: 1.7rem;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color:antiquewhite;
     border: none;
@@ -128,8 +128,7 @@ p,h1{
     
 }
 
-.botones{  
-    
+.botones{     
     width: 100%;
     height: 12% ;
     margin-top: 1%;
@@ -145,7 +144,7 @@ p,h1{
 .textarea textarea {  
     background-color: rgba(22, 22, 155, 0.486);    
     color: rgb(226, 226, 226);
-    font-size: 1rem ;
+    font-size: 1.4rem ;
     margin: 5%;
     margin-left: 20px;
     padding: 10px;
@@ -157,7 +156,7 @@ p,h1{
 }
 
 textarea::placeholder{
-    font-size: 1rem;
+    font-size: 1.3rem;
     color:antiquewhite;
 }
 textarea:focus{
@@ -183,7 +182,7 @@ button{
     border: none;
     box-shadow: 0 9px rgba(57, 20, 190, 0.904);
     color: antiquewhite;
-    font-size: 0.9rem larger;   
+    font-size: 1.3rem ;   
     font-weight: bolder;
     animation: bordermove2 5s infinite;
     
@@ -213,27 +212,29 @@ button:hover{
     box-shadow: 0 5px rgb(36, 16, 216);
     transform: translateY(4px);
 }
-footer > h2{
-    width: 30%; 
-    color: rgb(255, 255, 255);    
-    font-size: 15px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, Times, serif;
-    margin-top: 10px;
-    min-height:30px ;
-}
+
 span{
     font-style: italic;
-    font-size: 18px;
-    font-family: 'Times New Roman', Times, serif                          ;
+    font-size: 1.4em;
+    font-family: 'Times New Roman', Times, serif                             
 }
-
-footer{
+.footer{
     background-color: rgba(22, 22, 155, 0.486); 
-    margin-top:0px auto;
-    width: 100%;
-    height: 20%;
-    text-align: center;
     
+    width: 100%;
+    text-align: center; 
+    line-height: 1px; 
+    color: rgb(255, 255, 255); 
+    margin: 10px auto;
+    border-radius: 10px;
+    animation: bordermove 5s infinite;
+    
+}
+.footer  h2{     
+    font-size: 1.3em;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, Times, serif;
+    padding:15px ; 
+
 }
 
 @keyframes bordermove {
@@ -306,7 +307,7 @@ footer{
         height: 16rem;
     }
     .notext,.text{
-        margin-top: 6px auto;
+        margin-top: 3rem  ;
         margin-bottom: 1rem;      
     }
     .text > #texto{
@@ -318,23 +319,30 @@ footer{
     }
     .notext h1,.notext p{
         font-size: 1.8em;
-    }
-    
+    }   
     .copiar{
         height: 4rem;
     }
     .creador,#creador{
-        width: auto;
-        font-size: 20px;        
+        
+        font-size: 2em; 
+        height: auto;       
     }
     #creador{
-        font-size: 23px;
+        font-size: 1.2em;
+    }
+    .footer{
+        width: auto;
+        height: 6rem;
+        line-height: normal;
+
     }
 }
 
 @media screen and (min-width:481px) and (max-width:990px){
   main{
     width: 95%;
+    height: auto;
     
   }
   .text,.notext{
